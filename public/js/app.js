@@ -5,10 +5,9 @@ const search = document.querySelector('input');
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault();  // prevent refresh of browser on submit
 
-    location = search.value
-    console.log(location);
+    const location = search.value;
 
-    searchURL = 'http://localhost:3000/weather?address=' + location
+    const searchURL = 'http://localhost:3000/weather?address=' + location
 
     fetch(searchURL).then((response) => {
         response.json().then((data) => {

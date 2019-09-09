@@ -1,12 +1,12 @@
 const request = require('request')
 
-forecast_access_token = 'a28bd5025270f8c0e6492bd28e1afbea';
-forecast_url = 'https://api.darksky.net/forecast/' + forecast_access_token + '/';
+const forecast_access_token = 'a28bd5025270f8c0e6492bd28e1afbea';
+const forecast_url = 'https://api.darksky.net/forecast/' + forecast_access_token + '/';
 
 const forecast = (latitude, longitude, callback) => {
-    url = forecast_url + latitude + ',' + longitude;
+    const url = forecast_url + latitude + ',' + longitude;
 
-    options = {url, json: true}
+    const options = {url, json: true}
 
     request(options, (error, {body}) => {
         if(error){
